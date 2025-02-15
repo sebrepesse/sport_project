@@ -17,7 +17,7 @@ with st.expander("Information sur l'entrainement"):
 # Définition des blocs d'entraînement
 blocs = [
     [
-        ("⌛ Preparation", 10),
+        ("⌛ Preparation - Echauffement", 10),
         ("🏋🏻‍♂️ Jumping Jacks lents", tps_exercice),
         ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Talons-fesses dynamiques", tps_exercice),
@@ -30,7 +30,7 @@ blocs = [
         ("💨 Repos", tps_repos),
     ],
     [
-        ("⌛ Preparation", 10),
+        ("⌛ Preparation - Activation cardio", 10),
         ("🏋🏻‍♂️ Jumping Jack classique", tps_exercice),
         ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Talons fesses rapides", tps_exercice),
@@ -42,7 +42,7 @@ blocs = [
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation", 10),
+        ("⌛ Preparation - Cardio & Endurance", 10),
         ("🏋🏻‍♂️ Burpees modifiés", tps_exercice),
         ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Fentes dynamiques (alternes rapidement sans sauter)", tps_exercice),
@@ -54,7 +54,7 @@ blocs = [
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation", 10),
+        ("⌛ Preparation - Cardio & Renforcement", 10),
         ("🏋🏻‍♂️ Burpees sans pompes", tps_exercice),
         ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Mountain climber modérés", tps_exercice),
@@ -66,7 +66,7 @@ blocs = [
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation", 10),
+        ("⌛ Preparation - Résistance & Explosivité", 10),
         ("🏋🏻‍♂️ Jumping jack + squat (3 JJ & 1 squat)", tps_exercice),
         ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Fentes arrières dynamiques", tps_exercice),
@@ -78,6 +78,7 @@ blocs = [
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
+        ("⌛ Preparation - Retour au calme & Etirement", 10),
         ("🏋🏻‍♂️ Marche lente + respiration profonde", 60),
         ("🏋🏻‍♂️ Etirement quadriceps (cuisse)", 60),
         ("🏋🏻‍♂️ Etirement ischio-jambiers (derriere cuisse)", 60),
