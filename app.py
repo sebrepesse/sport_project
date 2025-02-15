@@ -2,13 +2,12 @@ import streamlit as st
 import time
 
 # Configuration de la page
-# st.set_page_config(page_title="Suivi Entraînement Cardio", layout="centered")
+st.set_page_config(page_title="Suivi Entraînement Cardio", layout="centered")
 
 # Interface utilisateur
-st.title("🏋🏻‍♂️ Cardio Objectif Pérou 🦙")
-
+st.title("🦙 Cardio Objectif Pérou ")
 with st.expander("Information sur l'entrainement"):
-    st.write("Le programme dure environ 30 minutes.")
+    st.write("Suivez les exercices avec un compteur de temps. Le programme dure environ 30 minutes.")
     st.write("Veuillez choisir le temps d'exercice et de repos")
 
     col1, col2 = st.columns(2)
@@ -18,68 +17,67 @@ with st.expander("Information sur l'entrainement"):
 # Définition des blocs d'entraînement
 blocs = [
     [
-        ("⌛ Preparation pour Echauffement", 10),
+        ("⌛ Preparation", 10),
         ("🏋🏻‍♂️ Jumping Jacks lents", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Talons-fesses dynamiques", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Montées de genoux (sans sauter)", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Squat + bras levés", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Cercle de bras + torsions du buste", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
     ],
     [
-        ("⌛ Preparation pour Activation Cardio", 10),
+        ("⌛ Preparation", 10),
         ("🏋🏻‍♂️ Jumping Jack classique", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Talons fesses rapides", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Montées de genoux dynamiques modifiés", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Pas chassés rapides", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation pour Cardio & Endurance", 10),
+        ("⌛ Preparation", 10),
         ("🏋🏻‍♂️ Burpees modifiés", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Fentes dynamiques (alternes rapidement sans sauter)", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Squats rapides", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Montées de genoux + bras tendus", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation pour Cardio & Renforcement", 10),
+        ("⌛ Preparation", 10),
         ("🏋🏻‍♂️ Burpees sans pompes", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Mountain climber modérés", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Squats sautées légers (ou squats rapides)", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Planche avec genoux alternés à la poitrine", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation pour Résistance & Explosivité", 10),
+        ("⌛ Preparation", 10),
         ("🏋🏻‍♂️ Jumping jack + squat (3 JJ & 1 squat)", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Fentes arrières dynamiques", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Moutain climbers rapides", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Burpess modifiés", tps_exercice),
-        ("⌛ Repos", tps_repos),
+        ("💨 Repos", tps_repos),
         ("🏋🏻‍♂️ Repos actif (marche)", tps_exercice)
     ],
     [
-        ("⌛ Preparation pour Retour au calme", 10),
         ("🏋🏻‍♂️ Marche lente + respiration profonde", 60),
         ("🏋🏻‍♂️ Etirement quadriceps (cuisse)", 60),
         ("🏋🏻‍♂️ Etirement ischio-jambiers (derriere cuisse)", 60),
@@ -97,8 +95,12 @@ if "current_exercise_index" not in st.session_state:
     st.session_state.current_exercise_index = 0
 
 # Fonction pour exécuter un exercice avec affichage progressif
-def run_exercise(exercise, duration):
+def run_exercise(exercise, duration, next_exercise):
     st.subheader(f"{exercise}")
+    
+    # Affichage du prochain exercice
+    st.write(f"➡️ **Prochain exercice** : {next_exercise}")
+    
     countdown_text = st.empty()
     progress_bar = st.progress(0)
 
@@ -125,7 +127,11 @@ if st.session_state.is_running:
         bloc = blocs[bloc_idx]
         if ex_idx < len(bloc):  # Vérifier s'il reste des exercices dans le bloc
             exercice, duree = bloc[ex_idx]
-            run_exercise(exercice, duree)
+            
+            # Définir le prochain exercice (s'il existe)
+            next_exercise = bloc[ex_idx + 1][0] if ex_idx + 1 < len(bloc) else "Fin du bloc"
+
+            run_exercise(exercice, duree, next_exercise)
 
             # Passer à l'exercice suivant
             st.session_state.current_exercise_index += 1
